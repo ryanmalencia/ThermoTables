@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ryanm.thermotables.MainActivity"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/selectFluid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:text="@string/fluid_text"
+        android:paddingEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/fluid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/selectFluid"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/varOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:text="@string/var_1"
+        android:paddingEnd="8dp"
+        android:paddingTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectFluid"
+        />
+
+    <Spinner
+        android:id="@+id/selectOne"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:paddingTop="10dp"
+        app:layout_constraintRight_toLeftOf="@id/inputOne"
+        app:layout_constraintLeft_toLeftOf="@+id/fluid"
+        app:layout_constraintTop_toBottomOf="@+id/fluid" />
+
+    <EditText
+        android:id="@+id/inputOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number"
+        android:paddingTop="10dp"
+        app:layout_constraintRight_toLeftOf="@id/unitsOne"
+        app:layout_constraintTop_toBottomOf="@+id/fluid"/>
+
+    <TextView
+        android:id="@+id/unitsOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:paddingTop="10dp"
+        android:text="kPa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fluid" />
+
+    <TextView
+        android:id="@+id/varTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:text="@string/var_2"
+        android:paddingEnd="8dp"
+        android:paddingTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/varOne"
+        />
+
+    <Spinner
+        android:id="@+id/selectTwo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:paddingTop="10dp"
+        app:layout_constraintRight_toLeftOf="@id/inputTwo"
+        app:layout_constraintLeft_toLeftOf="@+id/fluid"
+        app:layout_constraintTop_toBottomOf="@+id/selectOne" />
+
+    <EditText
+        android:id="@+id/inputTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="number"
+        android:paddingTop="10dp"
+        app:layout_constraintRight_toLeftOf="@id/unitsTwo"
+        app:layout_constraintTop_toBottomOf="@+id/selectOne"/>
+
+    <TextView
+        android:id="@+id/unitsTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:paddingTop="10dp"
+        android:text="kPa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectOne" />
+
+</android.support.constraint.ConstraintLayout>

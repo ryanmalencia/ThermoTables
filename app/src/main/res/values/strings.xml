@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ThermoTables</string>
+    <string name="fluid_text">Select Fluid: </string>
+    <string name="var_1">Variable 1: </string>
+    <string name="var_2">Variable 2: </string>
+    <string-array name="fluid_array">
+        <item>Steam</item>
+    </string-array>
+    <string-array name="variable">
+        <item>Temperature</item>
+        <item>Pressure</item>
+        <item>Enthalpy</item>
+        <item>Entropy</item>
+        <item>Int. Energy</item>
+        <item>Volume</item>
+        <item>Quality</item>
+    </string-array>
+</resources>
