@@ -3,6 +3,7 @@
     <string name="fluid_text">Select Fluid: </string>
     <string name="var_1">Variable 1: </string>
     <string name="var_2">Variable 2: </string>
+    <string name="unique">Pick two different properties</string>
     <string-array name="fluid_array">
         <item>Steam</item>
     </string-array>

@@ -112,4 +112,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/selectOne" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/unitsTwo"
+        android:text="@string/unique"
+        android:textColor="#ff0000"
+        android:visibility="gone"
+        android:id="@+id/unique"/>
+
 </android.support.constraint.ConstraintLayout>

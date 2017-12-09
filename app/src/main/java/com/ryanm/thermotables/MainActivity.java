@@ -6,11 +6,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     Spinner fluid;
     Spinner varOne;
     Spinner varTwo;
+    TextView unique;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         fluid =  findViewById(R.id.fluid);
         varOne = findViewById(R.id.selectOne);
         varTwo = findViewById(R.id.selectTwo);
+        unique = findViewById(R.id.unique);
 
         //set adapter for fluid selection
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.fluid_array, android.R.layout.simple_spinner_item);
@@ -44,10 +47,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-        switch(pos) {
-            case 0:
-                break;
+        Units units = new Units();
+        TextView text;
+        Spinner spinner = (Spinner) parent;
+        if(spinner.getId() == varOne.getId()) {
+            text = findViewById(R.id.unitsOne);
         }
+        else {
+            text = findViewById(R.id.unitsTwo);
+        }
+        if(varOne.getSelectedItemPosition() == varTwo.getSelectedItemPosition()) {
+            unique.setVisibility(View.VISIBLE);
+        }
+        else {
+            unique.setVisibility(View.GONE);
+        }
+        text.setText(units.getVerbose()[pos]);
     }
 
     public void onNothingSelected(AdapterView<?> parent) {
